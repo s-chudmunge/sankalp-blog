@@ -2,11 +2,6 @@
 title: "Majorana zero Edge States with longer-range interactions in a quantum Ising chain"
 date: 2026-01-09T07:54:55Z
 draft: false
-cover:
-    image: /images/Ettore_Majorana.jpg
-    alt: "A portrait of Ettore Majorana"
-    relative: false
-    hidden: false
 ---
 
 I’ve always been fascinated by the idea of global protection arising from local rules. In my master's thesis, I spent a lot of time looking at a 1D quantum Ising chain, specifically the Transverse Field Ising Model (TFIM), to see how it behaves when you push it toward its topological limits.
