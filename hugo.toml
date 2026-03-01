@@ -1,0 +1,11 @@
+baseURL = "https://s-chudmunge.github.io/"
+languageCode = "en-us"
+title = "Sankalp Chudmunge Blog"
+theme = "PaperMod"
+
+[params]
+  author = "Sankalp Chudmunge"
+  description = "Blog by Sankalp Chudmunge"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
