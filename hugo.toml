@@ -9,3 +9,5 @@ theme = "PaperMod"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  cover.responsiveImages = false
+  cover.linkFullImages = false
