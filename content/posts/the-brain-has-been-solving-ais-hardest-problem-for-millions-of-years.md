@@ -2,6 +2,9 @@
 title: "The Brain Has Been Solving AI's Hardest Problem for Millions of Years"
 date: 2026-03-01T10:47:02Z
 draft: false
+cover:
+    image: /images/pexels-cottonbro-6153354.jpg
+    alt: "A robotic hand touching a human hand"
 ---
 
 I recently spent some time reading a PhD thesis about recording electrical signals from a small patch of retinal tissue. The author was trying to understand how neurons in the eye coordinate their firing, how patterns emerge from what are essentially simple on-off switches working together. The thesis is technically impressive, but the deeper question buried underneath all the methodology is what stayed with me: how does something simple, repeated at scale, produce something that looks like intelligence? That question has not gone away. It has just migrated from biology labs into server farms.
