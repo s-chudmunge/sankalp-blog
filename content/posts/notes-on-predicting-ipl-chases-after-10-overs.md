@@ -22,4 +22,4 @@ This was the most important lesson of the project. A model does not fail just be
 
 Could this model be improved. Yes, but not by stacking more layers or training for more epochs. The path forward would be better features. Target runs, required run rate, run rate differentials, phase wise scoring, team strength priors, and venue chase history would all add signal. Each might add a few percentage points, but even then the curve would flatten.
 
-The notebook can be found here - [https://github.com/s-chudmunge/Notebooks/blob/main/IPL_chase_predictor.ipynb](https://github.com/s-chudmunge/Notebooks/blob/main/IPL_chase_predictor.ipynb)
+The notebook can be found here: [https://github.com/s-chudmunge/Notebooks/blob/main/IPL_chase_predictor.ipynb](https://github.com/s-chudmunge/Notebooks/blob/main/IPL_chase_predictor.ipynb)

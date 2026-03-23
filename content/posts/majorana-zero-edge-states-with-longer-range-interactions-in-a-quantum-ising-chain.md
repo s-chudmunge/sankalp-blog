@@ -4,9 +4,7 @@ date: 2026-01-09T07:54:55Z
 draft: false
 ---
 
-I’ve always been fascinated by the idea of global protection arising from local rules. In my master's thesis, I spent a lot of time looking at a 1D quantum Ising chain, specifically the Transverse Field Ising Model (TFIM), to see how it behaves when you push it toward its topological limits.
-
-When you transform the TFIM into a Kitaev chain, something remarkable happens: Majorana Zero Modes (MZMs) emerge. These aren't just particles; they are zero-energy edge states that act as their own antiparticles. What makes them special is their topological protection—they don't care about local noise or small perturbations. They only care about the "global" state of the system. This makes them a holy grail for quantum computing, as they offer a way to store information that is naturally resistant to decoherence.
+I worked with the Transverse Field Ising Model (TFIM) in a 1D quantum Ising chain during my master's thesis to see how it behaves when pushed toward its topological limits. Mapping this model to a Kitaev chain produces Majorana Zero Modes (MZMs), which are zero-energy edge states that act as their own antiparticles. These states are topologically protected, meaning they are robust against local noise or small perturbations because they only depend on the global state of the system. This resistance to decoherence makes them a candidate for storing quantum information.
 
 In this project, I used a Variational Quantum Eigensolver (VQE) to hunt for these ground states. VQE is essentially a numerical optimizer that searches the Hilbert space to find the configuration with the lowest energy. It’s an "honest" way to map out the topological phase boundaries, showing exactly where the energy gap closes and reopens as the system transitions between phases.
 
