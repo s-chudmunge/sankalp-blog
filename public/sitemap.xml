@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-03-01T10:47:02+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-01T10:47:02+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/the-brain-has-been-solving-ais-hardest-problem-for-millions-of-years/</loc>
+    <lastmod>2026-03-01T10:47:02+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/notes-on-predicting-ipl-chases-after-10-overs/</loc>
+    <lastmod>2026-01-11T10:54:33+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/majorana-zero-edge-states-with-longer-range-interactions-in-a-quantum-ising-chain/</loc>
+    <lastmod>2026-01-09T07:54:55+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/an-honest-model-is-better-than-a-perfect-one/</loc>
+    <lastmod>2026-01-07T20:42:11+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>
