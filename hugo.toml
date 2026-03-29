@@ -16,8 +16,6 @@ relativeURLs = true
 
   [params.label]
     text = "Sankalp Chudmunge"
-    icon = "favicon-32x32.png"
-    iconHeight = 35
 
   [params.assets]
     favicon = "favicon.ico"
