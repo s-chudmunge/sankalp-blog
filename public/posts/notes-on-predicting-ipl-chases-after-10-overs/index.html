@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Notes on Predicting IPL Chases After 10 Overs | Sankalp Chudmunge Blog</title>
+<title>Notes on Predicting IPL Chases After 10 Overs</title>
 <meta name="keywords" content="">
 <meta name="description" content="I started this project with a deceptively simple question: can we predict whether an IPL chase will be successful once 10 overs of the second innings are complete.
 The IPL datasets I was working with had two very different granularities. The ball by ball data was a stream of events, while the match level data stored outcomes and context. If I naïvely trained on ball by ball rows, the model would see multiple rows from the same match, future information would leak backwards, and accuracy would become meaningless. The only way forward was to decide exactly when the prediction is supposed to happen. I fixed that moment at the end of the 10th over of the second innings.">
 <meta name="author" content="Sankalp Chudmunge">
 <link rel="canonical" href="http://localhost:1313/posts/notes-on-predicting-ipl-chases-after-10-overs/">
-<link crossorigin="anonymous" href="../../assets/css/stylesheet.2fdea3b668d7a2e2702ffabc4d5bbc7a306d3fc110d391f2db5ae749bad9e545.css" integrity="sha256-L96jtmjXouJwL/q8TVu8ejBtP8EQ05Hy21rnSbrZ5UU=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -116,6 +116,16 @@ The IPL datasets I was working with had two very different granularities. The ba
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -127,7 +137,7 @@ The IPL datasets I was working with had two very different granularities. The ba
     <h1 class="post-title entry-hint-parent">
       Notes on Predicting IPL Chases After 10 Overs
     </h1>
-    <div class="post-meta"><span title='2026-01-11 10:54:33 +0000 UTC'>January 11, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Sankalp Chudmunge</span>
+    <div class="post-meta"><span title='2026-01-11 10:54:33 +0000 UTC'>January 11, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Views: <span id='viewcount-a40e2bbcfdd21541f9457cebde12f880'>...</span></span><script>fetch('https://api.counterapi.dev/v1/sankalpblog/a40e2bbcfdd21541f9457cebde12f880/up').then(res => res.json()).then(res => { document.getElementById('viewcount-a40e2bbcfdd21541f9457cebde12f880').innerText = res.count.toLocaleString(); }).catch(e => { document.getElementById('viewcount-a40e2bbcfdd21541f9457cebde12f880').innerText = '0'; })</script>&nbsp;·&nbsp;<span>Sankalp Chudmunge</span>
 
 </div>
   </header> 

@@ -6,8 +6,15 @@
     <description>Recent content on Sankalp Chudmunge Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2026 10:47:02 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EulerFold</title>
+      <link>http://localhost:1313/projects/eulerfold/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/eulerfold/</guid>
+      <description>A platform for building learning paths and mastering skills through structured roadmaps and decentralized audits.</description>
+    </item>
     <item>
       <title>The Brain Has Been Solving AI&#39;s Hardest Problem for Millions of Years</title>
       <link>http://localhost:1313/posts/the-brain-has-been-solving-ais-hardest-problem-for-millions-of-years/</link>

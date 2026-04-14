@@ -11,10 +11,24 @@ relativeURLs = true
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
+  ShowViewCount = true
   cover.responsiveImages = false
   cover.linkFullImages = false
+  mainSections = ["posts", "projects"]
 
   [params.label]
     text = "Sankalp Chudmunge"
 
   [params.assets]
+
+[[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
