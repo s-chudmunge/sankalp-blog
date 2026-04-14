@@ -13,9 +13,9 @@
 {{- end }}
 
 {{- if (.Param "ShowViewCount") -}}
-{{- $id := .File.UniqueID }}
-{{- $mode := cond .IsPage "up" "get" }}
-{{- $viewCount := printf "<span>Views: <span id='viewcount-%s'>...</span></span><script>fetch('https://api.counterapi.dev/v1/sankalpblog/%s/%s').then(res => res.json()).then(res => { document.getElementById('viewcount-%s').innerText = res.count.toLocaleString(); }).catch(e => { document.getElementById('viewcount-%s').innerText = '0'; })</script>" $id $id $mode $id $id }}
+{{- $slug := .RelPermalink | anchorize }}
+{{- $action := cond .IsPage "inc" "get" }}
+{{- $viewCount := printf "<span>Views: <span id='viewcount-%s'>...</span></span><script>fetch('/api/views?slug=%s&action=%s').then(res => res.json()).then(res => { document.getElementById('viewcount-%s').innerText = (res.count || 0).toLocaleString(); }).catch(e => { document.getElementById('viewcount-%s').innerText = '0'; })</script>" .File.UniqueID $slug $action .File.UniqueID .File.UniqueID }}
 {{- $scratch.Add "meta" (slice $viewCount) }}
 {{- end }}
 
