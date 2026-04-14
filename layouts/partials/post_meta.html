@@ -1,0 +1,30 @@
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") -}}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- end }}
+
+{{- if (.Param "ShowViewCount") -}}
+{{- $id := .File.UniqueID }}
+{{- $mode := cond .IsPage "up" "get" }}
+{{- $viewCount := printf "<span>Views: <span id='viewcount-%s'>...</span></span><script>fetch('https://api.counterapi.dev/v1/sankalpblog/%s/%s').then(res => res.json()).then(res => { document.getElementById('viewcount-%s').innerText = res.count.toLocaleString(); }).catch(e => { document.getElementById('viewcount-%s').innerText = '0'; })</script>" $id $id $mode $id $id }}
+{{- $scratch.Add "meta" (slice $viewCount) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
+{{- end }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}
