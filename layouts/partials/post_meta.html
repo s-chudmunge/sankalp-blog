@@ -13,9 +13,29 @@
 {{- end }}
 
 {{- if (.Param "ShowViewCount") -}}
-{{- $slug := .RelPermalink | anchorize }}
-{{- $action := cond .IsPage "inc" "get" }}
-{{- $viewCount := printf "<span>Views: <span id='viewcount-%s'>...</span></span><script>fetch('/api/views?slug=%s&action=%s').then(res => res.json()).then(res => { document.getElementById('viewcount-%s').innerText = (res.count || 0).toLocaleString(); }).catch(e => { document.getElementById('viewcount-%s').innerText = '0'; })</script>" .File.UniqueID $slug $action .File.UniqueID .File.UniqueID }}
+{{- $slug := .RelPermalink | anchorize -}}
+{{- $viewCountID := printf "viewcount-%s" .File.UniqueID -}}
+{{- $viewCount := printf "<span><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' style='width: 14px; height: 14px; vertical-align: middle; margin-right: 2px; margin-bottom: 2px;'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg><span id='%s'>...</span></span><script>
+(function() {
+  const slug = '%s';
+  const postPath = '%s';
+  const currentPath = window.location.pathname;
+  const normalize = p => p.replace(/\\/$/, '');
+  const isPostPage = normalize(currentPath) === normalize(postPath);
+  const action = isPostPage ? 'inc' : 'get';
+  
+  fetch('/api/views?slug=' + slug + '&action=' + action)
+    .then(res => res.json())
+    .then(res => {
+      const el = document.getElementById('%s');
+      if (el) el.innerText = (res.count || 0).toLocaleString();
+    })
+    .catch(() => {
+      const el = document.getElementById('%s');
+      if (el) el.innerText = '0';
+    });
+})();
+</script>" $viewCountID $slug .RelPermalink $viewCountID $viewCountID }}
 {{- $scratch.Add "meta" (slice $viewCount) }}
 {{- end }}
 
